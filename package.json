@@ -1,21 +1,32 @@
 {
-  "name": "react-starter",
+  "name": "react-starter-ES6",
   "browserify": {
     "transform": [
+      "babelify",
       "reactify"
     ]
   },
   "scripts": {
     "build": "NODE_ENV=production browserify main.js | uglifyjs -cm > public/bundle.js",
     "start": "ecstatic -p 8000 public",
-    "watch": "watchify main.js -o public/bundle.js -dv"
+    "server": "node browser-sync.js",
+    "watch": "watchify main.js -o public/bundle.js -dv",
+    "dev": "npm run watch & npm run server"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "dependencies": {
+    "babel": "^5.6.23",
+    "babel-eslint": "^3.1.23",
+    "babelify": "^6.1.2",
+    "browser-sync": "2.7.13",
     "browserify": "^10.2.6",
     "ecstatic": "~0.8.0",
     "react": "~0.13.3",
     "reactify": "^1.1.1",
     "uglify": "~0.1.5",
-    "watchify": "^3.2.3"
+    "watchify": "^3.2.3",
+    "tape": "~2.3.2"
   }
 }
