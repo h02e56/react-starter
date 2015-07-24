@@ -9,5 +9,5 @@ bs.init({
   files: ['./**/*.js'],
   open: false,
   online: false,
-  browser: "google chrome"
+  browser: 'google chrome'
 })

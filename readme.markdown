@@ -1,24 +1,30 @@
-# react-starter
+# react-starter-es6
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 bare-bones [react](https://facebook.github.io/react/) starter
 using [reactify](https://npmjs.com/package/reactify) for jsx
+using [babelify](https://github.com/babel/babelify) for [Babel](https://babeljs.io)
 under [browserify](http://browserify.org)/[watchify](https://npmjs.com/package/watchify)
 with [npm run scripts](http://substack.net/task_automation_with_npm_run)
+with [browserSync](http://www.browsersync.io) for live reload
+with [standard](https://github.com/feross/standard) for linting
 
 [view the starter demo](http://substack.neocities.org/react_starter.html)
 
 # quick start
 
 ```
-$ npm run watch &
-$ npm start
+$ npm install
+$ npm run dev
 ```
 
 # commands
 
 * `npm run build` - build for production
-* `npm run watch` - automatically recompile during development
+* `npm run dev` - start dev server with auto realod and automatically recompile during development
 * `npm start` - start a static development web server
+* `npm test` - code style revision
 
 # starter code
 

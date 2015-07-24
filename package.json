@@ -7,11 +7,12 @@
     ]
   },
   "scripts": {
-    "build": "NODE_ENV=production browserify main.js | uglifyjs -cm > public/bundle.js",
     "start": "ecstatic -p 8000 public",
-    "server": "node browser-sync.js",
+    "build": "NODE_ENV=production browserify main.js | uglifyjs -cm > public/bundle.js",
+    "dev": "npm run watch & npm run server-dev",
     "watch": "watchify main.js -o public/bundle.js -dv",
-    "dev": "npm run watch & npm run server"
+    "server-dev": "node browser-sync.js",
+    "test": "standard"
   },
   "standard": {
     "parser": "babel-eslint"
@@ -25,8 +26,12 @@
     "ecstatic": "~0.8.0",
     "react": "~0.13.3",
     "reactify": "^1.1.1",
-    "uglify": "~0.1.5",
-    "watchify": "^3.2.3",
-    "tape": "~2.3.2"
+    "watchify": "^3.2.3"
+  },
+  "devDependencies": {
+    "sinon": "1.15.4",
+    "standard": "4.5.4",
+    "tape": "2.3.3",
+    "uglify": "~0.1.5"
   }
 }
