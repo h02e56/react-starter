@@ -1,6 +1,6 @@
 # react-starter-es6
 
-[![build status](https://travis-ci.org/h02e56/react-starter.svg?branch=master)](http://travis-ci.org/h02e56/
+[![build status](https://travis-ci.org/h02e56/react-starter.svg?branch=master)](http://travis-ci.org/h02e56/)
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 bare-bones [react](https://facebook.github.io/react/) starter
