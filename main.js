@@ -2,7 +2,7 @@ import React from 'react'
 
 var App = React.createClass({
   getInitialState: function () { return { n: 0 } },
-  render: function () {
+	render: function () {
     return (<div>
       <h1>clicked {this.state.n} times</h1>
       <button onClick={this.handleClick}>click me!</button>
@@ -12,5 +12,5 @@ var App = React.createClass({
     this.setState({ n: this.state.n + 1 })
   }
 })
-React.render(<App />, document.querySelector('#content'))
 
+React.render(<App />, document.querySelector('#content'))
