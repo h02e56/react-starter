@@ -1,16 +1,24 @@
 import React from 'react'
 
-var App = React.createClass({
-  getInitialState: function () { return { n: 0 } },
-	render: function () {
+class App extends React.Component {
+  constructor (props) {
+    super()
+    this.state = props
+  }
+  handleClick () {
+    this.setState({
+      n: this.state.n + 1
+    })
+  }
+  render () {
     return (<div>
       <h1>clicked {this.state.n} times</h1>
-      <button onClick={this.handleClick}>click me!</button>
+      <button onClick={this.handleClick.bind(this)}>click me!</button>
     </div>)
-  },
-  handleClick: function () {
-    this.setState({ n: this.state.n + 1 })
   }
-})
+}
+
+App.propTypes = { n: React.PropTypes.number }
+App.defaultProps = { n: 1}
 
 React.render(<App />, document.querySelector('#content'))

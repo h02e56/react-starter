@@ -29,7 +29,6 @@
     "watchify": "^3.2.3"
   },
   "devDependencies": {
-    "sinon": "1.15.4",
     "standard": "4.5.4",
     "standard-format": "1.6.0",
     "tape": "2.3.3",
